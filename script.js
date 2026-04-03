@@ -1,3 +1,3 @@
-const todo = document.querySelector('#todo');
-const progress = document.querySelector('#progress');
-const done = document.querySelector('#done');
+const todoColumn = document.querySelector('#todo');
+const progressColumn = document.querySelector('#progress');
+const doneColumn = document.querySelector('#done');
