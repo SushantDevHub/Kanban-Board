@@ -1,12 +1,14 @@
 const todoColumn = document.querySelector('#todo');
 const progressColumn = document.querySelector('#progress');
 const doneColumn = document.querySelector('#done');
+let dragElement = null;
 
 const tasks = document.querySelectorAll('.task');
 
 tasks.forEach(task => {
     task.addEventListener('drag', (e) => {
-        console.log('Dragging', e);
+       // console.log('Dragging', e);
+        dragElement = task;
       })
     })
 
@@ -28,7 +30,9 @@ tasks.forEach(task => {
 
         column.addEventListener('drop', (e) => {
             e.preventDefault();
-            console.log('Dropped', e);
+            console.log('Dropped', dragElement, column);
+            column.appendChild(dragElement);
+            column.classList.remove('hover-over');
         })
     }
 
