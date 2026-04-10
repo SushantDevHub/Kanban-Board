@@ -58,7 +58,7 @@ nav{
 }
 
 nav button{
-background-color: var(--bg-buttton-color);
+background-color:  #007bff;
 border: none;
 outline: none;
 color: var(--primary-text-color);
